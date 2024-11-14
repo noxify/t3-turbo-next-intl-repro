@@ -1,6 +1,5 @@
-import type en from "@acme/locales/lang/en.json"
-
-type Messages = typeof en
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
+type Messages = typeof import("@acme/locales/lang/en.json")
 
 declare global {
   // Use type safe message keys with `next-intl`

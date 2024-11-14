@@ -1,0 +1,49 @@
+{
+  "name": "frontend",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm with-env next build",
+    "clean": "git clean -xdf .cache .turbo dist node_modules .next",
+    "clean:cache": "git clean -xdf .cache",
+    "dev": "pnpm with-env next dev",
+    "dev:https": "LOCAL_HTTPS=true pnpm with-env next dev --experimental-https",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint .",
+    "playwright:report": "playwright show-report",
+    "playwright:ui": "playwright test --ui",
+    "start": "pnpm with-env next start",
+    "test:a11y": "pnpm with-env playwright test a11y",
+    "test:e2e": "pnpm with-env playwright test e2e",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "prettier": "@acme/prettier-config",
+  "dependencies": {
+    "@acme/locales": "workspace:*",
+    "@t3-oss/env-nextjs": "0.11.1",
+    "date-fns": "4.1.0",
+    "lucide-react": "0.456.0",
+    "multimatch": "7.0.0",
+    "next": "14.2.16",
+    "next-intl": "3.25.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "superjson": "2.2.1",
+    "ts-dot-prop": "2.1.4",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "workspace:*",
+    "@acme/prettier-config": "workspace:*",
+    "@acme/tsconfig": "workspace:*",
+    "@types/node": "22.9.0",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "dotenv-cli": "7.4.2",
+    "eslint": "9.14.0",
+    "jiti": "2.4.0",
+    "typescript": "5.6.3"
+  }
+}

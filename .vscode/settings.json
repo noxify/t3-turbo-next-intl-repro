@@ -1,0 +1,28 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.rules.customizations": [{ "rule": "*", "severity": "warn" }],
+  "eslint.runtime": "node",
+  "eslint.workingDirectories": [
+    { "pattern": "apps/*/" },
+    { "pattern": "packages/*/" },
+    { "pattern": "tooling/*/" }
+  ],
+  "prettier.ignorePath": ".gitignore",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "next/router.d.ts",
+    "next/dist/client/router.d.ts"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "i18n-ally.localesPaths": ["packages/locales/src/lang"],
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.pathMatcher": "{locale}.json",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.enabledFrameworks": ["next-intl"],
+  "i18n-ally.extract.autoDetect": true,
+  "i18n-ally.fullReloadOnChanged": true
+}
